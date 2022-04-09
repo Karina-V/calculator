@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: normal;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9951c4), to(#8a6223));
+  background: linear-gradient(to top, #9951c4, #8a6223);
+}
+
+.calculator {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  -ms-grid-columns: (100px)[4];
+      grid-template-columns: repeat(4, 100px);
+  -ms-grid-rows: minmax(120px, auto) (100px)[9];
+      grid-template-rows: minmax(120px, auto) repeat(9, 100px);
+  grid-auto-rows: 0px;
+  margin-top: 5%;
+}
+
+.calculator button {
+  cursor: pointer;
+  font-size: 2.5rem;
+  border: 1px solid #ffffff;
+  outline: none;
+  background-color: rbga(255, 255, 255, 0.75);
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.calculator button:hover {
+  background-color: #a9a9a9;
+}
+
+.span-two {
+  grid-column: span 2;
+  color: #fff;
+  background-color: #4d0b0b;
+}
+
+.output {
+  padding: 15px;
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  word-wrap: break-word;
+  word-break: break-all;
+  height: 100%;
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 2.5rem;
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 3.5rem;
+}
+/*# sourceMappingURL=style.css.map */
